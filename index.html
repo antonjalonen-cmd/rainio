@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow">
-<title>RAINIO.com — Ravivihjeet ja vedonlyönnin työkalut</title>
+<title>rAInio.com — Ravivihjeet ja vedonlyönnin työkalut</title>
 <meta name="description" content="Rainion vihjeet, ravitilastot ja vedonlyönnin työkalut. Radalta, ei ruudulta.">
-<meta property="og:title" content="RAINIO.com — Radalta, ei ruudulta">
+<meta property="og:title" content="rAInio.com — Radalta, ei ruudulta">
 <meta property="og:description" content="Ravivihjeet, kerroinvahti ja tilastot yhdessä paikassa.">
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,9 +37,14 @@ a:hover{text-decoration:underline}
 header{position:sticky;top:0;z-index:50;background:rgba(7,9,12,.86);backdrop-filter:blur(10px);
   border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:26px;height:64px}
-.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.5rem;color:var(--ink);
-  letter-spacing:.06em;text-transform:uppercase}
-.logo em{color:var(--neon);font-style:normal}
+.logo{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:1.62rem;color:var(--ink);
+  letter-spacing:.02em;text-transform:none;display:inline-flex;align-items:baseline}
+.logo em{color:var(--neon);font-style:normal;position:relative;font-weight:800;font-size:1.12em;
+  text-shadow:0 0 18px rgba(182,255,59,.55),0 0 3px rgba(182,255,59,.9)}
+.logo em::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-3px;height:2px;
+  background:var(--neon);border-radius:2px;opacity:.85}
+.logo .rest{color:var(--ink)}
+.logo .dot{color:var(--mut);font-weight:600}
 nav{margin-left:auto;display:flex;gap:22px;align-items:center}
 nav a{color:var(--body);font-size:.86rem;font-weight:600;letter-spacing:.02em}
 nav a:hover{color:var(--ink);text-decoration:none}
@@ -55,16 +60,17 @@ nav a:hover{color:var(--ink);text-decoration:none}
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 /* Rainio on hero-kuvassa oma hahmonsa, ei tapetti: oikea puoli terävänä ja
    kirkkaana, vasen reuna häivytetään taustaan maskilla jotta teksti kestää. */
-.hero-photo{position:absolute;top:0;right:0;bottom:0;width:56%;
+.hero-photo{position:absolute;top:0;right:0;bottom:0;width:64%;
   background:url('assets/rainio.jpg') no-repeat;background-size:cover;
-  background-position:38% 18%;filter:grayscale(.12) contrast(1.12) saturate(1.05) brightness(1.06);
-  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 16%,#000 42%);
-  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.55) 16%,#000 42%)}
-.hero-glow{position:absolute;right:6%;top:14%;width:44%;height:70%;pointer-events:none;
-  background:radial-gradient(closest-side,rgba(182,255,59,.20),transparent 72%);filter:blur(6px)}
+  background-position:44% 12%;filter:contrast(1.16) saturate(1.14) brightness(1.14);
+  -webkit-mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.75) 11%,#000 26%);
+  mask-image:linear-gradient(90deg,transparent 0%,rgba(0,0,0,.75) 11%,#000 26%)}
+.hero-glow{position:absolute;right:2%;top:8%;width:56%;height:82%;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(182,255,59,.26),transparent 70%);filter:blur(4px)}
+/* Tummennus vain tekstipalstan paalla: hahmo jaa kirkkaaksi. */
 .hero-mask{position:absolute;inset:0;pointer-events:none;
-  background:linear-gradient(100deg,rgba(7,9,12,.96) 0%,rgba(7,9,12,.82) 32%,rgba(7,9,12,.18) 55%,rgba(7,9,12,0) 72%),
-             linear-gradient(180deg,rgba(7,9,12,.55) 0%,transparent 22%,transparent 68%,rgba(7,9,12,.92) 100%)}
+  background:linear-gradient(100deg,rgba(7,9,12,.95) 0%,rgba(7,9,12,.72) 26%,rgba(7,9,12,.08) 44%,rgba(7,9,12,0) 56%),
+             linear-gradient(180deg,rgba(7,9,12,.42) 0%,transparent 18%,transparent 74%,rgba(7,9,12,.9) 100%)}
 }
 .hero-grid{position:absolute;inset:0;opacity:.16;
   background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
@@ -76,9 +82,9 @@ nav a:hover{color:var(--ink);text-decoration:none}
 .kicker i{width:7px;height:7px;border-radius:50%;background:var(--neon);
   box-shadow:0 0 0 0 rgba(182,255,59,.7);animation:pulse 2.2s infinite}
 @keyframes pulse{70%{box-shadow:0 0 0 11px rgba(182,255,59,0)}100%{box-shadow:0 0 0 0 rgba(182,255,59,0)}}
-.hero h1{font-size:clamp(3.4rem,8.4vw,7rem);max-width:9ch;position:relative}
+.hero h1{font-size:clamp(3.2rem,7.4vw,6.2rem);max-width:8ch;position:relative}
 .hero h1 span{display:block;color:var(--neon)}
-.hero p.lead{max-width:38ch;margin-top:20px;font-size:1.06rem;color:#C6D2DE;position:relative}
+.hero p.lead{max-width:34ch;margin-top:20px;font-size:1.06rem;color:#C6D2DE;position:relative}
 .hero-cta{display:flex;gap:12px;margin-top:30px;flex-wrap:wrap;position:relative}
 .hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap;padding-top:24px;
   border-top:1px solid var(--line);max-width:560px;position:relative}
@@ -189,7 +195,7 @@ footer a{color:var(--body)}footer a:hover{color:var(--neon)}
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#">RAIN<em>IO</em>.com</a>
+    <a class="logo" href="#" aria-label="Rainio.com">r<em>AI</em><span class="rest">nio</span><span class="dot">.com</span></a>
     <nav>
       <a href="#vihjeet">Vihjeet</a>
       <a href="#tyokalut">Työkalut</a>
@@ -444,7 +450,7 @@ footer a{color:var(--body)}footer a:hover{color:var(--neon)}
       </div>
     </div>
     <div class="legal">
-      <span>© 2026 RAINIO.com — demoversio</span>
+      <span>© 2026 rAInio.com — demoversio</span>
       <span class="mono">Toteutus: antonjalonen.fi</span>
     </div>
   </div>
