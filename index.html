@@ -44,6 +44,10 @@ header .wrap{display:flex;align-items:center;gap:26px;height:64px}
 .logo em::after{content:"";position:absolute;left:-2px;right:-2px;bottom:-3px;height:2px;
   background:var(--neon);border-radius:2px;opacity:.85}
 .logo .rest{color:var(--ink)}
+.logo .io{color:var(--ink);font-weight:800;font-size:1.06em;position:relative;
+  text-shadow:0 0 14px rgba(255,255,255,.28)}
+.logo .io::after{content:"";position:absolute;left:0;right:0;bottom:-3px;height:2px;
+  background:var(--ink);border-radius:2px;opacity:.35}
 .logo .dot{color:var(--mut);font-weight:600}
 nav{margin-left:auto;display:flex;gap:22px;align-items:center}
 nav a{color:var(--body);font-size:.86rem;font-weight:600;letter-spacing:.02em}
@@ -198,7 +202,7 @@ footer a{color:var(--body)}footer a:hover{color:var(--neon)}
 
 <header>
   <div class="wrap">
-    <a class="logo" href="#" aria-label="Rainio.com">r<em>AI</em><span class="rest">nio</span><span class="dot">.com</span></a>
+    <a class="logo" href="#" aria-label="Rainio.com">r<em>AI</em><span class="rest">n</span><b class="io">IO</b><span class="dot">.com</span></a>
     <nav>
       <a href="#vihjeet">Vihjeet</a>
       <a href="#tyokalut">Työkalut</a>
